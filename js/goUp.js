@@ -1,0 +1,17 @@
+$(document).ready(function(){
+
+    $('.go-up').click(function(){
+        $('body, html').animate({
+            scrollTop: '0px'
+        }, 1000);
+    });
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 70){
+            $('.go-up').slideDown(300);
+        }
+        else {
+            $('.go-up').slideUp(300);
+        }
+    });
+});
